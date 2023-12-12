@@ -1,0 +1,561 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+	background-color: #ffa500;
+	font-family: "Aclonica", Times, "Times New Roman", serif;
+}
+img, a {
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+html {
+	scroll-padding-top: 9.8vw;
+}
+.sectionMenu {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	max-height: 10vw;
+	top: 0;
+	left: 0;
+	padding: 0;
+	background-color: #000;
+	opacity: 85%;
+}
+.sectionSide {
+	position: fixed;
+	width: 4vw;
+	z-index: 2;
+	bottom: 4vw;
+	right: 2vw;
+	padding: 0;
+	text-align: center;
+	border: 0.2vw solid #a15323;
+	background-color: #ffa500;
+	border-radius: 2vw;
+}
+.sectionSide i {
+	color:	#0000FF;
+	margin: 1vw 0;
+	font-size: 2vw;
+}
+.sectionSide i:hover {
+	opacity: 60%;
+}
+.sectionMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+.sectionMenu li a {
+	display: block;
+	padding: 4vw;
+	text-decoration: none;
+	font-size: 2.5vw;
+	max-height: 10vw;
+	font-weight: bold;
+	border-top: 0.2vw solid #fff;			
+	background-color: #a15323;
+	color: #fff;
+	
+}
+.sectionMenu li:last-child a {
+	border-bottom: 0.2vw solid #fff;
+}
+.sectionMenu li a:hover {
+	background-color: #d09f7e;
+}
+
+.logo:hover {
+	opacity: 100%;
+}
+.logo img {
+	max-height: 5vw;
+	max-width: 15vw;
+	vertical-align: middle;
+}
+.helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+}
+.menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 4.5vw 4vw;
+	position: relative;
+	user-select: none;
+}
+.menu-icon .navicon {
+	background: #fff;
+	display: block;
+	height: 0.5vw;
+	position: relative;
+	transition: background .2s ease-out;
+	width: 5vw;
+}
+.navicon:before, .navicon:after {
+	background: #fff;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+}
+.navicon:before {
+	transform: translate(0,-1.2vw);
+}
+.navicon:after {
+	transform: translate(0,1.2vw);
+}
+.menu-btn {
+	display: none;
+}
+.menu-btn:checked ~ .menu {
+	max-height: 50vw;
+}
+.menu-btn:checked .menu-icon .navicon {
+	background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .navicon:before {
+	transform:rotate(-45deg)
+}
+.menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+}
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+	top: 0;
+}
+.sectionHeader {
+	margin-top: 6.3vw;
+	text-align: center;
+	padding: 9vw 0;
+	background-image: url("https://photos.pinksale.finance/file/pinksale-logo-upload/1700642100063-554dfe6b437c55cfe1b37775d95138ef.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.sectionMint p {
+	margin: 0;
+}
+.sectionMint {
+	color: #fff;
+	background-color: #ffa500;
+	padding: 2vw;
+	font-weight: bold;
+	font-size: 2vw;
+	margin: 0 auto;
+	border-radius: 1vw;
+	transition-duration: 1s;
+	width: 50vw;
+	opacity: 95%;
+}
+.sectionMint h4 {
+	margin: 0;
+	font-size: 3vw;
+}
+.textFooter {
+	color: red;
+	font-size: 2.0vw;
+}
+.counterContainer, .mintButtonContainer {
+	margin: 1vw 0;
+}
+.buttonCounter {
+	color: #fff;
+	border: 0.2vw solid teal;
+	padding: 0;
+	background-color: teal;
+	text-align: center;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 3vw;
+	margin: 0.3vw 0;
+	border-radius: 0.5vw;
+	transition-duration: 1s;
+	width: 4vw;
+	border-radius: 100%;
+}
+.buttonCounter:hover {
+	cursor: pointer;
+	color: teal;
+	background-color: #fff;
+}
+#counterAmount {
+	font-size: 3vw;
+	margin: 0 3vw;
+}
+.buttonType1 {
+	font-family: "Aclonica", Times, "Times New Roman", serif;
+	color: #fff;
+	border: 0.2vw solid #12571d;
+	background-color: #0000ff;
+	padding: 0.5vw 1vw;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 2vw;
+	margin: 0.3vw 0;
+	border-radius: 1vw;
+	transition-duration: 1s;
+}
+.buttonType1:hover {
+	cursor: pointer;
+	color: #0000ff;
+	background-color: #fff;
+}
+.buttonType1:disabled {
+	border: 0.2vw solid #555;
+	background-color: #808080;
+}
+.buttonType1:disabled:hover {
+	border: 0.2vw solid #555;
+	color: #fff;
+	background-color: #808080;
+	opacity: 80%;
+}
+
+.mobileBreak {
+	display: none;
+}
+.mobileHide {
+	display: inline;
+}
+.sectionTile {
+	font-size: 2vw;
+	text-align: center;
+	color: white;
+	padding: 2vw 4vw 4vw 4vw;
+	background-size: cover;
+	margin: 0;
+}
+.sectionTile h2 {
+	margin: 0 0 2vw 0;
+	font-size: 5vw;
+	font-weight: bold;
+}
+.imgButton a {
+	display: inline-block;
+	width: 21vw;
+	height: 7vw;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fff;
+	margin: 0 1vw;
+	white-space: nowrap;
+	border-radius: 10vw;
+	border: grey 0.5vw solid;
+}
+.imgButton a:hover {
+	opacity: 80%;
+}
+.imgButton a im {
+	width: 80%;
+	vertical-align: middle;
+}
+.notice {
+	width: 85%;
+	background-color: #fff;
+	opacity: 80%;
+	margin: 2vw auto;
+	padding: 0.3vw 1vw 3vw;
+	border-radius: 2vw;
+}
+.notice h3 {
+	color: red;
+	font-weight: bold;
+	font-size: 3vw;
+}
+.notice p {
+	color: #000;
+}
+.footnote, .notice .footnote {
+	color: #808080;
+	margin-bottom: 0.5vw;
+}
+.roadmapContent {
+	margin-bottom: 4vw;
+}
+.slideContent {
+	width: 100%;
+}
+.slideContent img {
+	/* width: %; */
+}
+.flickity-button {
+	width: 4vw;
+	height: 4vw;
+	background-color: #fff;
+	border: 0.2vw solid #522704;
+}
+.flickity-button:hover {
+	opacity: 60%;
+}
+.flickity-page-dots {
+	counter-reset: a;
+	list-style-type: none;
+	bottom: -5vw;
+}
+.flickity-page-dots .dot {
+	width: 4vw;
+	height: 4vw;
+	opacity: 1;
+	background: #fff;
+	border: 0.2vw solid #522704;
+	margin: 0.3vw 0.5vw;
+}
+.flickity-page-dots .dot:hover {
+	opacity: 60%;
+}
+.flickity-page-dots .dot.is-selected {
+	background: #522704;
+}
+.flickity-page-dots .dot::after {
+	content: counter(a);
+	counter-increment: a;
+	position: absolute;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 3vw;
+	width: 4vw;
+	height: 4vw;
+	color: #522704;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.flickity-page-dots .dot.is-selected::after {
+	color: #fff;
+}
+.sectionQuarter {
+	float: left;
+	width: 25%;
+}
+.sectionQuarter img {
+	width: 70%;
+	border-radius: 2vw;
+}
+.sectionQuarter h2 {
+	margin-bottom: 0.2vw;
+}
+.sectionQuarter p {
+	margin: 0;
+}
+.sectionFooter {
+	font-size: 1.5vw;
+	text-align: center;
+	padding: 2vw;
+	background-image: url('https://photos.pinksale.finance/file/pinksale-logo-upload/1700642100063-554dfe6b437c55cfe1b37775d95138ef.png');
+	background-size: cover;
+	background-color: #d09f7e;
+	background-position: bottom; 
+	margin: 0;
+	font-weight: bold;
+	color: #371d10;
+}
+.sectionFooter p {
+	margin: 0;
+}
+
+.slideContent a:hover {
+	opacity: 60%;
+}
+
+
+span.button {
+	position: relative;
+	display: inline-flex;
+	vertical-align: bottom;
+	align-items: center;
+	justify-content: center;
+	gap: 0.375rem;
+	padding: 0.375rem 0.675rem;
+	margin: 0 0.25rem;
+	font-size: 0.875rem;
+	border-radius: var(--rounded-sm);
+	background-color: hsl(var(--h), var(--s), 20%);
+	border: 1px solid hsl(var(--h), var(--s), 22%);
+	color: inherit;
+	line-height: 1;
+	box-shadow: var(--shadow-md);
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.1s;
+}
+
+.highlight {
+	position: relative;
+}
+
+.highlightSelected {
+	z-index: 5;
+}
+
+.highlightSelected::after {
+	opacity: 0.5 !important;
+}
+
+.highlight::after {
+	opacity: 0;
+}
+
+.highlight::after {
+	transition: opacity 0.2s;
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	filter: blur(15px);
+	background: linear-gradient(95deg, #7baff3, #3f8ef6, #0b2c56, #4e70d0);
+	background-size: 200% 200%;
+	animation: animateGlow 5s linear infinite;
+}
+
+span.button:hover {
+	background-color: hsl(var(--h), var(--s), 30%);
+	border: 1px solid hsl(var(--h), var(--s), 32%);
+	color: var(--color-grey-100);
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0.5rem;
+	margin-bottom: 1.75rem;
+	background-color: rgb(122 79 13);
+}
+
+.header .buttons {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 4;
+	pointer-events: none;
+	background: hsla(0, 0%, 4%, 0.75);
+	transition: opacity 0.2s;
+}
+
+@keyframes animateGlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 200% 50%;
+	}
+}
+
+
+@media (min-width: 900px) {
+	.sectionMenu li {
+		float: left;
+	}
+	.sectionMenu ul {
+		margin-right: 2vw;
+	}
+	.sectionMenu li a {
+		padding: 2.2vw 1vw 1.8vw;
+		border: none;
+		text-align: center;
+		width: 16vw;
+		font-size: 1.5vw;
+		background-color: #fdbc24;
+		color: #272240;
+		margin: 2vw 0.5vw;
+		border-radius: 2vw;
+	}
+	.sectionMenu li:last-child a {
+		border: none;
+	}
+	.sectionMenu li a:hover {
+		background-color: #ffdb85;
+	}
+
+	.menu {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+	.menu-icon {
+		display: none;
+	}
+}
+@media only screen and (max-width: 620px) {
+	.mobileBreak {
+		display: inline-block;
+	}
+	.mobileHide {
+		display: none;
+	}
+	.sectionMint {
+		width: 70vw;
+		font-size: 3vw;
+	}
+	.sectionMint h4 {
+		font-size: 4vw;
+	}
+	.buttonCounter {
+		border: 0.5vw solid teal;
+		font-size: 4vw;
+		width: 6vw;
+		border-radius: 100%;
+	}
+	#counterAmount {
+		font-size: 4vw;
+	}
+	.buttonType1 {
+		font-size: 3vw;
+		border: 0.5vw solid #12571d;
+		padding: 1vw 1.5vw;
+	}
+	.textFooter {
+		font-size: 2vw;
+	}
+	.roadmapContent p {
+		font-size: 2vw;
+	}
+	.sectionQuarter {
+		width: 50%;
+	}
+	.sectionQuarter h2 {
+		margin: 0.5vw 0;
+	}
+	.sectionQuarter:nth-child(-n+2) p {
+		margin: 0 0 2vw 0;
+	}
+}
