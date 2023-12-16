@@ -471,6 +471,21 @@ span.button:hover {
 	transition: opacity 0.2s;
 }
 
+.userBalance {
+	border: solid 1px rgba(134, 130, 126, 0.6);
+  border-radius: 10px;
+  background-color: rgba(134, 130, 126, 0.3);
+  padding: 5px;
+  font-size: 16px;
+}
+
+.networkButton {
+  display: flex;
+  flex-direction: row;
+  gap: 3vw;
+  align-items: center;
+}
+
 @keyframes animateGlow {
 	0% {
 		background-position: 0% 50%;
