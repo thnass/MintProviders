@@ -4,7 +4,7 @@ html {
 body {
 	margin: 0;
 	background-color: #ffa500;
-	background-image: url("https://photos.pinksale.finance/file/pinksale-logo-upload/1700642100063-554dfe6b437c55cfe1b37775d95138ef.png");
+	background-image: url("provider.png");
 	background-size: cover;
 	/* background-repeat: no-repeat; */
 	font-family: "Aclonica", Times, "Times New Roman", serif;
@@ -16,15 +16,6 @@ img, a {
 	-o-user-drag: none;
 	user-drag: none;
 }
-/* .unselectable {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-} */
 html {
 	scroll-padding-top: 9.8vw;
 }
@@ -155,7 +146,7 @@ html {
 	margin-top: 6.3vw;
 	text-align: center;
 	padding: 9vw 0;
-	/* background-image: url("https://photos.pinksale.finance/file/pinksale-logo-upload/1700642100063-554dfe6b437c55cfe1b37775d95138ef.png");
+	/* background-image: url("provider.png");
 	background-size: cover;
 	background-repeat: no-repeat; */
 }
@@ -377,7 +368,7 @@ html {
 	font-size: 1.5vw;
 	text-align: center;
 	padding: 2vw;
-	background-image: url('https://photos.pinksale.finance/file/pinksale-logo-upload/1700642100063-554dfe6b437c55cfe1b37775d95138ef.png');
+	background-image: url("provider.png");
 	background-size: cover;
 	background-color: #d09f7e;
 	background-position: bottom; 
@@ -504,6 +495,13 @@ span.button:hover {
 	}
 }
 
+@media (min-width: 1200px) {
+  .sectionMint {
+    top: 60%;
+		width: 35vw;
+		font-size: 1.2vw;
+	}
+}
 
 @media (min-width: 900px) {
 	.sectionMenu li {
