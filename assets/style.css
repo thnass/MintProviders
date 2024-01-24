@@ -6,7 +6,7 @@ body {
 	background-color: #ffa500;
 	background-image: url("provider.png");
 	background-size: cover;
-	/* background-repeat: no-repeat; */
+	background-repeat: no-repeat;
 	font-family: "Aclonica", Times, "Times New Roman", serif;
 }
 img, a {
